@@ -1,0 +1,8 @@
+# Turn our passed env variables into something ansible can use to talk to azure
+client_id: "{{ lookup('env','AZURE_CLIENT_ID') }}"
+secret: "{{ lookup('env','AZURE_SECRET') }}"
+tenant_id: "{{ lookup('env','AZURE_TENANT') }}"
+azure_clients_object_id: "{{ lookup('env','AZURE_CLIENTS_OBJECT_ID') }}"  #TEMP - should figure this out at runtime
+
+# Where to deploy our resources by default
+location: "northeurope"

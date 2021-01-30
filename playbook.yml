@@ -1,0 +1,7 @@
+- name: "Provision Azure infrastructure"  # Just a name for our own use really
+  hosts: localhost                        # Run this item from our 'local' machine
+  pre_tasks:                              # We want load in our variables to customise the run
+    - name: Load our variables
+      include_vars: "{{ env }}"           # A variable file to load, which we tell ansible at run time
+  roles:
+    - infrastructure                      # The role we want to run

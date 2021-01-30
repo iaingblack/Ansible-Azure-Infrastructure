@@ -1,0 +1,8 @@
+- name: Create Resource Group
+  azure.azcollection.azure_rm_resourcegroup:
+    subscription_id: "{{ subscription_id }}"
+    client_id: "{{ client_id }}"
+    secret: "{{ secret }}"
+    tenant: "{{ tenant_id }}"
+    location: "{{ location }}"
+    name: "{{ resource_group_name }}"
